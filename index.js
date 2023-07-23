@@ -49,7 +49,6 @@ export class Learn {
     }
 }
 
-// The data is just the same circle data twice.
 let ourData = [
     1, 0, 0, 0.5, 0.5, 0.5, 0.5, 0, 0, 0,
     0, 0, 0.5, 1, 1, 1, 1, 0.5, 0, 0,
@@ -61,10 +60,13 @@ let ourData = [
     0, 0.5, 1, 1, 1, 1, 1, 1, 0.5, 0,
     0, 0, 0.5, 1, 1, 1, 1, 0.5, 0, 0,
     0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0, 0, 1
-]; // Super close, but not quite to the circle.
+]; // Super close, but not quite to the circle. (That we have in data.json)
 
+
+// Fetch the arrays that resemble a circle.
 let array = JSON.parse(fs.readFileSync("./data.json", "utf8"));
 
+// Make a Model.
 let Model = new Learn(array)
 
 // Train the Model.
